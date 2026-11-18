@@ -51,7 +51,8 @@ async function salvar() {
   if (vals.some(v => !v || v <= 0)) { msgEl.textContent = 'Preencha as dez provas com valores maiores que zero.'; return; }
   btnSalvar.disabled = true; msgEl.textContent = 'Salvando sua pontuação...';
   try {
-    const res = await fetch('salvar.php', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nome,valores:vals})});
+    const res = await fetch('salvar.php', {method:'POST',headers:
+    {'Content-Type':'application/json'},body:JSON.stringify({nome,valores:vals})});
     const data = await res.json();
     if (!res.ok || !data.ok) throw new Error(data.mensagem || 'Não foi possível salvar.');
     msgEl.textContent = `${data.mensagem} Você fez ${formatar(data.pontos)} pontos.`;
