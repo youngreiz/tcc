@@ -19,7 +19,8 @@ h2{font-size:clamp(48px,7vw,82px);letter-spacing:-.02em;margin-bottom:13px}h3{fo
 .days{display:grid;grid-template-columns:1fr 1fr;gap:20px}.day,.calc,.info-card{background:linear-gradient(180deg,rgba(16,37,28,.96),rgba(11,25,19,.96));border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 24px 70px rgba(0,0,0,.2)}
 .day ol{margin:0;padding-left:29px}.day li{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.07)
 ;font-weight:800}.day li:last-child{border-bottom:0}.day small{display:block;color:var(--muted);font-weight:400;margin-top:2px}
-.calc{display:grid;grid-template-columns:1fr 270px;gap:25px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.
+.calc{display:grid;grid-template-columns:1fr 270px;gap:25px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.
 campo{display:block;background:#07120d;border:1px solid var(--line);border-radius:15px;padding:15px}.campo span{display:block;font-weight:800}
 .campo small{display:block;color:var(--muted);margin:2px 0 9px}.
 campo input,.salvar input{width:100%;border:1px solid #365a4b;border-radius:10px;background:#06100c;color:#fff;padding:11px 12px;font:inherit;outline:none}
