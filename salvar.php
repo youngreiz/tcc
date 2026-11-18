@@ -36,7 +36,7 @@ $total = 0;
 foreach ($provas as $i => $prova) {
     if (!isset($valores[$i]) || !is_numeric($valores[$i])) {
         http_response_code(422);
-        echo json_encode(['ok' => false, 'mensagem' => 'Preencha todas as provas com valores válidos.']);
+        echo json_encode(['ok' => false, 'mensagem' =>'Preencha todas as provas com valores válidos.']);
         exit;
     }
     $v = (float)$valores[$i];
