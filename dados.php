@@ -24,10 +24,10 @@ function calcularPontos(array $p, float $v): int
 {
     if ($v <= 0) return 0;
     if ($p['t'] === 't') {
-        $r = $v < $p['B'] ? $p['A'] * pow($p['B'] - $v, $p['C']) : 0;
+     $r = $v < $p['B'] ? $p['A'] * pow($p['B'] - $v, $p['C']) : 0;
     } else {
-        $x = $p['t'] === 'c' ? $v * 100 : $v;
-        $r = $x > $p['B'] ? $p['A'] * pow($x - $p['B'], $p['C']) : 0;
+    $x = $p['t'] === 'c' ? $v * 100 : $v;
+     $r = $x > $p['B'] ? $p['A'] * pow($x - $p['B'], $p['C']) : 0;
     }
     return (int) floor($r);
 }
