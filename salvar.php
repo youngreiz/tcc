@@ -60,9 +60,9 @@ if (is_file($arq)) {
 }
 
 $ranking[] = [
-    'nome' => $nome,
-    'pontos' => $total,
-    'data' => date('c')
+'nome' => $nome,
+'pontos' => $total,
+'data' => date('c')
 ];
 
 usort($ranking, function ($a, $b) {
