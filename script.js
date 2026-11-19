@@ -25,7 +25,8 @@ function criarCampos() {
   campos.querySelectorAll('input').forEach(input => input.addEventListener('input', calcular));
 }
 
-function valores() { return [...campos.querySelectorAll('input')].map(input => Number(input.value)); }
+function valores() { return [...campos.querySelectorAll('input')]
+  .map(input => Number(input.value)); }
 function calcular() {
   const vals = valores();
   const total = PROVAS.reduce((s, p, i) => s + pontosDaProva(p, vals[i]), 0);
