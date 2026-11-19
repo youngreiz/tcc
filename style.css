@@ -103,5 +103,7 @@ footer{padding:35px 0;color:var(--muted);font-size:14px;text-align:center}
 .salvar{grid-template-columns:1fr}
                         
 .salvar button{width:100%}.hero{min-height:420px}.hero h1{font-size:100px}.total{min-height:230px}}
+
 @media(max-width:500px){.wrap{width:min(var(--max),calc(100% - 22px))}.hero h1{font-size:78px}
-                        .day,.calc,.info-card{padding:20px}section{padding:70px 0}.total strong{font-size:65px}}
+                        
+.day,.calc,.info-card{padding:20px}section{padding:70px 0}.total strong{font-size:65px}}
