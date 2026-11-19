@@ -32,7 +32,7 @@ function calcularPontos(array $p, float $v): int
     return (int) floor($r);
 }
 
-function lerRanking(): array
+function lerRanking():array
 {
     $arq = __DIR__ . '/data/ranking.json';
     if (!is_file($arq)) return [];
