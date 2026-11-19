@@ -44,41 +44,55 @@ function limpar() {
 }
 async function salvar() {
   const nome = nomeEl.value.trim();
+  
   const vals = valores();
   if (!nome) { msgEl.textContent = 'Digite seu nome antes de salvar.'; nomeEl.focus(); return; }
   if (nome.length > 30) { msgEl.textContent = 'O nome pode ter no máximo 30 caracteres.'; return; }
+  
   const inputs = [...campos.querySelectorAll('input')];
   inputs.forEach(i => i.classList.toggle('invalid', !i.value || Number(i.value) <= 0));
+  
   if (vals.some(v => !v || v <= 0)) { msgEl.textContent = 'Preencha as dez provas com valores maiores que zero.'; return; }
   btnSalvar.disabled = true; msgEl.textContent = 'Salvando sua pontuação...';
   try {
+    
     const res = await fetch('salvar.php', {method:'POST',headers:
     {'Content-Type':'application/json'},body:JSON.stringify({nome,valores:vals})});
+    
     const data = await res.json();
     if (!res.ok || !data.ok) throw new Error(data.mensagem || 'Não foi possível salvar.');
+    
     msgEl.textContent = `${data.mensagem} Você fez ${formatar(data.pontos)} pontos.`;
     await carregarRanking();
     document.getElementById('ranking').scrollIntoView({behavior:'smooth'});
+    
   } catch(e) { msgEl.textContent = e.message || 'Erro ao salvar.'; }
   finally { btnSalvar.disabled = false; }
 }
 async function carregarRanking() {
   const lista = document.getElementById('lista-ranking');
   try {
+    
     const res = await fetch('ranking.php',{cache:'no-store'});
     if (!res.ok) throw new Error();
+    
     const ranking = await res.json();
     lista.innerHTML = ranking.length ? '' : '<li class="vazio">Ninguém entrou no ranking ainda.</li>';
     ranking.forEach((r,i) => {
+      
       const li = document.createElement('li');
       const span = document.createElement('span'); const pos = document.createElement('b');
       pos.textContent = `${i+1}º`; span.append(pos, ` ${r.nome}`);
+      
       const strong = document.createElement('strong'); strong.textContent = formatar(r.pontos);
       li.append(span,strong); lista.appendChild(li);
     });
   } catch { /* mantém o ranking renderizado pelo PHP */ }
 }
-btnExemplo.addEventListener('click', preencherExemplo);
-btnLimpar.addEventListener('click', limpar);
-btnSalvar.addEventListener('click', salvar);
-criarCampos(); calcular(); carregarRanking();
+   btnExemplo.addEventListener('click', preencherExemplo);
+
+   btnLimpar.addEventListener('click', limpar);
+
+   btnSalvar.addEventListener('click', salvar);
+
+   criarCampos(); calcular(); carregarRanking();
