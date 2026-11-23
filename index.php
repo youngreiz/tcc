@@ -46,5 +46,6 @@ id="lista-ranking"><?php $top=array_slice(lerRanking(),0,10); if(!$top): ?><li c
 class="info-card"><strong>10</strong><p>provas, uma pontuação final e uma combinação de capacidades que torna o decatlo uma das provas mais completas do atletismo.</p></div></div><a class="back" href="#">↑ Voltar ao topo</a></div></section>
 </main>
 <footer><div class="wrap">Site educativo sobre decatlo · Calculadora baseada nos coeficientes definidos em <code>dados.php</code> · © <?= date('Y') ?></div></footer>
+  
 <script>const PROVAS = <?= json_encode($provas, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) ?>;</script><script src="script.js"></script>
 </body></html>
