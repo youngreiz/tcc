@@ -1,9 +1,15 @@
 const campos = document.getElementById('campos');
+
 const totalEl = document.getElementById('total');
+
 const nomeEl = document.getElementById('nome');
+
 const msgEl = document.getElementById('msg');
+
 const btnExemplo = document.getElementById('exemplo');
+
 const btnLimpar = document.getElementById('limpar');
+
 const btnSalvar = document.getElementById('salvar');
 
 const formatar = n => new Intl.NumberFormat('pt-BR').format(Number(n) || 0);
