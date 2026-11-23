@@ -19,6 +19,7 @@ hero:after{content:'10';position:absolute;right:3%;bottom:-70px;font:900 340px/.
 .hero .wrap{padding:90px 0;position:relative;z-index:1}
 
 .eyebrow{display:inline-flex;padding:7px 12px;border:1px solid #395d4c;border-radius:999px;color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+
 .hero h1{font:900 clamp(86px,16vw,190px)/.82 'Big Shoulders Display';text-transform:uppercase;letter-spacing:-.04em;margin:22px 0 16px}
 
 .hero p{max-width:720px;font-size:clamp(18px,2.4vw,27px);color:var(--muted);margin:0
