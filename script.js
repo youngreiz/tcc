@@ -16,7 +16,7 @@ return x > p.B ? Math.floor(p.A * Math.pow(x - p.B, p.C)) : 0;
 };
 
 
-function criarCampos(){
+function criarCampos(){   parte de colocar segundos ou metros 
 campos.innerHTML = PROVAS.map((p, i) => `
 <label class="campo">
 <span>${i + 1}. ${p.nome}</span>
@@ -27,24 +27,24 @@ campos.innerHTML = PROVAS.map((p, i) => `
 campos.querySelectorAll('input').forEach(input => input.addEventListener('input', calcular));
 }
 
-function valores(){
+function valores(){      valores das provas 
 return [...campos.querySelectorAll('input')].map(input => Number(input.value));
 }
 
-function calcular(){
+function calcular(){     calculadora funcional do site 
 const vals = valores();
 const total = PROVAS.reduce((s, p, i) => s + pontosDaProva(p, vals[i]), 0);
 totalEl.textContent = formatar(total);
 return total;
 }
 
-function preencherExemplo(){
+function preencherExemplo(){   alteração 
 PROVAS.forEach((p, i) => campos.querySelector(`[data-index="${i}"]`).value = p.ex);
 calcular();
 msgEl.textContent = 'Exemplo preenchido. Agora você pode alterar qualquer resultado.';
 }
 
-function limpar(){
+function limpar(){     limpar valores,tempo ou metro
 campos.querySelectorAll('input').forEach(i => {
 i.value = '';
 i.classList.remove('invalid');
@@ -54,7 +54,7 @@ totalEl.textContent = '0';
 msgEl.textContent = '';
 }
 
-async function salvar(){
+async function salvar(){   salva ao ranking top10 
 const nome = nomeEl.value.trim();
 const vals = valores();
 
