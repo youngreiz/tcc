@@ -15,6 +15,7 @@ $entrada = json_decode(file_get_contents('php://input'), true);
 $nome = trim((string)($entrada['nome'] ?? ''));
 $valores = $entrada['valores'] ?? [];
 
+
 if ($nome === '') {
     http_response_code(422);
     
