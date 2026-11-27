@@ -15,6 +15,7 @@ const x = p.t === 'c' ? v * 100 : v;
 return x > p.B ? Math.floor(p.A * Math.pow(x - p.B, p.C)) : 0;
 };
 
+
 function criarCampos(){
 campos.innerHTML = PROVAS.map((p, i) => `
 <label class="campo">
