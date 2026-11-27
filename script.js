@@ -99,7 +99,7 @@ btnSalvar.disabled = false;
 }
 }
 
-async function carregarRanking(){
+async function carregarRanking(){  ranking top10 pontos baixos ao mais alto 
 const lista = document.getElementById('lista-ranking');
 
 try{
