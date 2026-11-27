@@ -301,7 +301,7 @@ color:var(--muted);
 margin-bottom:17px;
 }
 
-.total button,.salvar button{
+.total button,.salvar button{ botao de salvar 
 width:100%;
 border:0;
 border-radius:11px;
@@ -313,7 +313,7 @@ color:#142000;
 margin-top:8px;
 }
 
-.total button:last-child{
+.total button:last-child{ batao de valores coloca tempo,lançamentos,Arremessos
 background:transparent;
 color:var(--text);
 border:1px solid var(--line);
@@ -490,7 +490,7 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
-.salvar button{
+.salvar button{ botao de salvar 
 width:100%;
 }
 
