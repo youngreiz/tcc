@@ -30,6 +30,7 @@ function calcularPontos(array $p, float $v): int
      $r = $x > $p['B'] ? $p['A'] * pow($x - $p['B'], $p['C']) : 0;
     }
     return (int) floor($r);
+    
 }
 
 function lerRanking():array
