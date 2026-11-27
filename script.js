@@ -44,7 +44,7 @@ calcular();
 msgEl.textContent = 'Exemplo preenchido. Agora você pode alterar qualquer resultado.';
 }
 
-function limpar(){     limpar valores,tempo ou metro
+function limpar(){     //limpar valores,tempo ou metro//
 campos.querySelectorAll('input').forEach(i => {
 i.value = '';
 i.classList.remove('invalid');
